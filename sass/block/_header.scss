@@ -1,0 +1,119 @@
+.header{
+    width: 100%;
+    background: rgba(247, 235, 229, 1);
+    .navbar{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        &__collection{
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.79);
+        }
+        .show{
+            right: 0;
+        }
+        &__item:hover{
+            color: rgb(246, 140, 87);
+        }
+        &__info{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            
+        }
+        .fa-bounce{
+            display: none;
+           
+        }
+        &__desc{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            select{
+                border: none;
+                background: transparent;
+            }
+            @media (max-width:1200px) {
+                p{
+                    display: none;
+                }
+            }
+        }
+        &__menu{
+            display: none;
+        }
+        &__logo{
+            display: none;
+        }
+    }
+}
+
+@media (max-width:990px) {
+    .header{
+        margin-top: 5px;
+        .navbar{
+            &__collection{
+                display: fixed;
+                position: fixed;
+                top: 0;
+                right: -350px;
+                width: 250px;
+                height: 200px;
+                background: #f1f1f1; 
+                color: #000;
+                flex-direction: column;
+                padding:30px;
+                transition: .5s;
+            }
+            
+            &__menu{
+                display: block;
+                span{
+                    display: block;
+                    width: 30px;
+                    height: 3px;
+                    background: #000;
+                    margin-bottom: 3px;
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:700px) {
+    .header{
+        .navbar{
+            .fa-bounce{
+                display: inline-block;
+            }
+            &__logo{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .image1{
+                    width: 37px;
+                    height: 37px;
+                }
+                .image2{
+                    width: 57px;
+                    height: 47px;
+                    margin-top: -30px;
+                }
+                .image3{
+                    width: 7px;
+                    height: 4px;
+                    margin-top: -10px;
+                }
+            }
+            &__info{
+                display: none;
+            }
+        }
+    }
+}

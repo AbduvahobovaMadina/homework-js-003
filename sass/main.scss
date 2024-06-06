@@ -1,0 +1,11 @@
+@import "reset";
+
+main{
+    background: #f7f7f7;
+}
+
+
+@import "block/header";
+@import "block/hero";
+@import "block/product";
+@import "block/footer";

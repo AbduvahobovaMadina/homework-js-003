@@ -1,0 +1,32 @@
+.hero{
+    padding: 20px ;
+    width: 100%;
+    background: #fff;
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 124px;
+            height: 124px;
+        }
+    }
+    &__desc{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 14px;
+        img{
+            width: 20px;
+            height: 20px;
+        }
+        &:hover{
+            color: rgb(246, 140, 87);
+            cursor: pointer;
+        }
+    }
+}
+@media (max-width:990px) {
+    .hero{
+        display: none;
+    }
+}
